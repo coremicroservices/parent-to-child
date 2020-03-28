@@ -1,0 +1,13 @@
+<h2>This is parent component</h2>
+<label for="cars">Choose a Type:</label>
+
+<!-- onChange($event) -->
+<select id="cars" (change)="selectedId = $event.target.value">
+  <option value="audi">Select</option>
+  <option value="0001">Donut</option>
+  <option value="0002">Mango</option>
+  <option value="0003">Apple</option> 
+</select>
+<br>
+----------------------------------------------------------------
+<app-child [selectedId] ="selectedId"></app-child>

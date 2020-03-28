@@ -1,0 +1,45 @@
+<div *ngIf="seletedData">
+  <h2> This is Child Component</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Name :
+        </th>
+        <th>
+          {{seletedData.name}}
+        </th>
+      </tr>
+      <tr>
+        <th>
+          Ppu :
+        </th>
+        <th>
+          {{seletedData.ppu}}
+        </th>
+      </tr>   
+      <tr aria-colspan="2">
+        Batters & Topping
+      </tr>    
+    </thead>
+    <tbody>
+   
+      <tr *ngFor="let batter of  seletedData.batters.batter">
+          <td>
+            {{batter.id}}
+          </td>
+          <td>
+            {{batter.type}}
+          </td>
+      </tr>
+      <tr *ngFor="let batter of  seletedData.batters.topping">
+        <td>
+          {{batter.id}}
+        </td>
+        <td>
+          {{batter.type}}
+        </td>
+    </tr>
+    </tbody>
+</table>
+</div>
